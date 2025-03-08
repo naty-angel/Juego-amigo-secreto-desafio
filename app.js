@@ -8,5 +8,10 @@ let participantes= [];
  */
 function agregarParticipante() {
     let nombre = document.getElementById("nombre").value.trim(); //obtiene el nombre y elimina los espacio extras
-    if( n)
+    if( nombre && !participantes.includes (nombre)){ //verifica que no este vacio y no sea repetido 
+        participantes.push(nombre); // agrega el nombre al array
+        actualizarLista();//Actualiza la lista
+        document.getElementById("nombre").value ="";//limpia el imput 
+    }
 }
+
